@@ -1,0 +1,33 @@
+<svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shadow -->
+  <ellipse cx="150" cy="380" rx="120" ry="15" fill="#000" opacity="0.1"/>
+  
+  <!-- Tube Cap -->
+  <rect x="85" y="320" width="130" height="30" rx="5" fill="#C85A8E"/>
+  <rect x="90" y="345" width="120" height="10" fill="#A84876"/>
+  <rect x="100" y="352" width="100" height="8" fill="#8A3960"/>
+  
+  <!-- Tube Body -->
+  <rect x="70" y="100" width="160" height="220" rx="8" fill="#E489B4"/>
+  <rect x="75" y="105" width="150" height="210" rx="6" fill="#EE9FC5"/>
+  
+  <!-- Highlight on tube -->
+  <rect x="180" y="110" width="40" height="180" rx="4" fill="#F5B8D8" opacity="0.5"/>
+  
+  <!-- Face Mask Icon -->
+  <g transform="translate(100, 150)">
+    <!-- Mask shape -->
+    <path d="M 50 0 Q 80 5, 90 30 Q 85 70, 50 80 Q 15 70, 10 30 Q 20 5, 50 0 Z" fill="#FFF" opacity="0.95"/>
+    
+    <!-- Eye holes -->
+    <ellipse cx="35" cy="28" rx="8" ry="12" fill="#EE9FC5"/>
+    <ellipse cx="65" cy="28" rx="8" ry="12" fill="#EE9FC5"/>
+    
+    <!-- Nose -->
+    <path d="M 48 35 L 50 45 L 52 35 Z" fill="#EE9FC5"/>
+    
+    <!-- Mouth -->
+    <ellipse cx="50" cy="58" rx="15" ry="8" fill="#EE9FC5"/>
+  </g>
+</svg>
+
