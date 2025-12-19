@@ -27,7 +27,7 @@ export default function CheckoutPage() {
   // Stripe payment links based on quantity
   const stripeLinks = {
     1: "https://buy.stripe.com/9B66oI4Hd9IxcgSdGiaR20f",
-    2: "https://buy.stripe.com/28E3cw5Lh4oddkWcCeaR20e",
+    2: "https://buy.stripe.com/00wdRa5Lh3k94Oq8lYaR20g",
   };
 
   const handleCheckout = () => {

@@ -55,9 +55,9 @@ export default function ProductCard({
     {
       quantity: 2,
       name: "2 Units",
-      price: 94.99,
+      price: 89.99,
       originalPrice: 399.98,
-      savings: 76,
+      savings: 77,
       popular: true,
     },
   ];
@@ -81,11 +81,11 @@ export default function ProductCard({
       addItem({
         id: `${id}-double`,
         name: `${name} (2 Units)`,
-        price: 94.99,
+        price: 89.99,
         image: images[0],
       });
       // Track Meta Pixel event
-      trackAddToCart(`${name} (2 Units)`, 94.99);
+      trackAddToCart(`${name} (2 Units)`, 89.99);
     }
     
     setTimeout(() => setIsAdding(false), 1000);
