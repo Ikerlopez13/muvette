@@ -73,6 +73,7 @@ export default function ProductCard({
         name: `${name} (1 Unit)`,
         price: 54.99,
         image: images[0],
+        quantity: 1,
       });
       // Track Meta Pixel event
       trackAddToCart(`${name} (1 Unit)`, 54.99);
@@ -82,6 +83,7 @@ export default function ProductCard({
         name: `${name} (2 Units)`,
         price: 89.99,
         image: images[0],
+        quantity: 2,
       });
       // Track Meta Pixel event
       trackAddToCart(`${name} (2 Units)`, 89.99);
