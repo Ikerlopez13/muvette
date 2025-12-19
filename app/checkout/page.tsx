@@ -4,6 +4,8 @@ import { useCart } from "../context/CartContext";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Header from "../components/Header";
+import { trackInitiateCheckout } from "../utils/metaPixel";
+import { useEffect } from "react";
 
 export default function CheckoutPage() {
   const { items, getTotal } = useCart();
@@ -14,6 +16,13 @@ export default function CheckoutPage() {
 
   // Calculate total quantity in cart
   const totalQuantity = items.reduce((sum, item) => sum + item.quantity, 0);
+
+  // Track InitiateCheckout event on page load
+  useEffect(() => {
+    if (items.length > 0) {
+      trackInitiateCheckout(total);
+    }
+  }, [total, items.length]);
 
   // Stripe payment links based on quantity
   const stripeLinks = {

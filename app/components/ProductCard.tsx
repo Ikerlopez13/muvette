@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useCart } from "../context/CartContext";
 import { useState } from "react";
+import { trackAddToCart } from "../utils/metaPixel";
 
 interface ProductCardProps {
   id: string;
@@ -71,6 +72,8 @@ export default function ProductCard({
         price: 54.99,
         image: images[0],
       });
+      // Track Meta Pixel event
+      trackAddToCart(`${name} (1 Unit)`, 54.99);
     } else {
       addItem({
         id: `${id}-double`,
@@ -78,6 +81,8 @@ export default function ProductCard({
         price: 94.99,
         image: images[0],
       });
+      // Track Meta Pixel event
+      trackAddToCart(`${name} (2 Units)`, 94.99);
     }
     
     setTimeout(() => setIsAdding(false), 1000);
