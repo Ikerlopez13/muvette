@@ -19,17 +19,17 @@ const reviews: Review[] = [
   },
   {
     id: 2,
-    name: "Maricarmen",
-    rating: 5,
-    comment: "Me deja el pelo genial, lo recomiendo 100%. Súper contenta con la compra!",
-    image: "/A0fce3c2eb89d49499912ac24c01c0421f.jpg_960x960q75.jpg_.avif",
-  },
-  {
-    id: 3,
     name: "Jessica R.",
     rating: 5,
     comment: "Best purchase this year! Lightweight, powerful, and gives salon-quality results.",
     image: "/Aeb6eb15bfc0e494284faa260cea1ee0cB.jpg_960x960q75.jpg_.avif",
+  },
+  {
+    id: 3,
+    name: "Maricarmen",
+    rating: 5,
+    comment: "Me deja el pelo genial, lo recomiendo 100%. Súper contenta con la compra!",
+    image: "/A0fce3c2eb89d49499912ac24c01c0421f.jpg_960x960q75.jpg_.avif",
   },
 ];
 
