@@ -12,7 +12,7 @@ const faqs: FAQItem[] = [
   {
     question: "How long does shipping take?",
     answer:
-      "All orders are processed within 24 hours. Standard shipping takes a maximum of 7 business days to arrive at your door.",
+      "All orders are processed within 24 hours. Standard shipping takes a maximum of 10 business days to arrive at your door.",
   },
   {
     question: "What's included in the box?",

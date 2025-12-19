@@ -61,7 +61,7 @@ export default function TermsAndConditions() {
               <strong>Processing Time:</strong> All orders are processed within 24 hours of purchase confirmation (excluding weekends and holidays).
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              <strong>Delivery Time:</strong> Standard shipping takes a maximum of 7 business days from the processing date. Delivery times may vary depending on your location.
+              <strong>Delivery Time:</strong> Standard shipping takes a maximum of 10 business days from the processing date. Delivery times may vary depending on your location.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
               <strong>Tracking:</strong> Once your order is shipped, you will receive a tracking number via email to monitor your delivery status.
@@ -99,7 +99,7 @@ export default function TermsAndConditions() {
 
             <h3 className="text-xl font-bold mb-3">6.3 Non-Delivery</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              If your order does not arrive within the maximum delivery timeframe (7 business days + processing time), please contact us at <strong className="text-accent">+34 675 977 794</strong>. We will investigate with the shipping carrier and provide a resolution.
+              If your order does not arrive within the maximum delivery timeframe (10 business days + processing time), please contact us at <strong className="text-accent">+34 675 977 794</strong>. We will investigate with the shipping carrier and provide a resolution.
             </p>
 
             <h3 className="text-xl font-bold mb-3">6.4 Exclusions</h3>
