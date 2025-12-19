@@ -14,9 +14,6 @@ export default function CheckoutPage() {
   const shipping = 5.99;
   const total = getTotal() + shipping;
 
-  // Calculate total quantity in cart
-  const totalQuantity = items.reduce((sum, item) => sum + item.quantity, 0);
-
   // Track InitiateCheckout event on page load
   useEffect(() => {
     if (items.length > 0) {
@@ -24,18 +21,16 @@ export default function CheckoutPage() {
     }
   }, [total, items.length]);
 
-  // Stripe payment links based on quantity
-  const stripeLinks = {
-    1: "https://buy.stripe.com/9B66oI4Hd9IxcgSdGiaR20f",
-    2: "https://buy.stripe.com/00wdRa5Lh3k94Oq8lYaR20g",
-  };
-
   const handleCheckout = () => {
-    const link = stripeLinks[totalQuantity as keyof typeof stripeLinks];
-    if (link) {
-      window.location.href = link;
+    // Check which product is in the cart and redirect to appropriate Stripe link
+    const hasDoublePackage = items.some(item => item.id.includes('-double'));
+    
+    if (hasDoublePackage) {
+      // 2 Units Pack (€89.99)
+      window.location.href = "https://buy.stripe.com/00wdRa5Lh3k94Oq8lYaR20g";
     } else {
-      alert("Invalid quantity. Please contact support.");
+      // 1 Unit (€54.99) - need the correct link
+      window.location.href = "https://buy.stripe.com/9B66oI4Hd9IxcgSdGiaR20f";
     }
   };
 

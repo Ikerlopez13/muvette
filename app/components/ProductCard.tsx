@@ -80,13 +80,13 @@ export default function ProductCard({
     } else {
       addItem({
         id: `${id}-double`,
-        name: `${name} (2 Units)`,
+        name: `${name} (2 Units Pack)`,
         price: 89.99,
         image: images[0],
-        quantity: 2,
+        quantity: 1,
       });
       // Track Meta Pixel event
-      trackAddToCart(`${name} (2 Units)`, 89.99);
+      trackAddToCart(`${name} (2 Units Pack)`, 89.99);
     }
     
     setTimeout(() => setIsAdding(false), 1000);
