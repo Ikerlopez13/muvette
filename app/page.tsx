@@ -45,12 +45,12 @@ export default function Home() {
       
       <main className="max-w-7xl mx-auto px-4 py-8">
         {/* Hero Section / Featured Product */}
-        <div className="w-full">
+        <div className="w-full animate-fade-in">
           <ProductCard {...product} />
         </div>
 
         {/* Lifestyle Carousel Section */}
-        <section className="mt-16">
+        <section className="mt-16 animate-fade-in-up delay-200">
           <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Real Results, Real Beauty
@@ -63,10 +63,12 @@ export default function Home() {
         </section>
 
         {/* Customer Reviews Section */}
-        <Reviews />
+        <div className="animate-fade-in-up delay-300">
+          <Reviews />
+        </div>
 
         {/* Included Accessories Section */}
-        <section className="mt-16 bg-white rounded-2xl p-8 md:p-12 shadow-md">
+        <section className="mt-16 bg-white rounded-2xl p-8 md:p-12 shadow-md animate-fade-in-up delay-400">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Included Accessories
@@ -110,7 +112,9 @@ export default function Home() {
         </section>
 
         {/* FAQ Section */}
-        <FAQ />
+        <div className="animate-fade-in-up delay-500">
+          <FAQ />
+        </div>
       </main>
 
       {/* Footer */}
