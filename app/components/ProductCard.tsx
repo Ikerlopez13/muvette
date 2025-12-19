@@ -40,6 +40,8 @@ export default function ProductCard({
   const [isAdding, setIsAdding] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedQuantity, setSelectedQuantity] = useState<1 | 2>(1);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   const quantityOptions = [
     {
@@ -100,12 +102,44 @@ export default function ProductCard({
     );
   };
 
+  // Touch handlers for mobile swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+    
+    if (isLeftSwipe) {
+      goToNextImage();
+    }
+    if (isRightSwipe) {
+      goToPrevImage();
+    }
+    
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
+
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
       {/* Responsive Layout: Vertical en móvil, Horizontal en desktop */}
       <div className="flex flex-col lg:flex-row">
         {/* Product Image Carousel - Left side on desktop */}
-        <div className="relative w-full lg:w-1/2 bg-primary flex items-center justify-center min-h-[300px] lg:min-h-[400px] group">
+        <div 
+          className="relative w-full lg:w-1/2 bg-primary flex items-center justify-center min-h-[300px] lg:min-h-[400px] group"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           {/* Main Image */}
           <Image
             src={images[currentImageIndex]}
