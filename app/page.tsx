@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import ProductCard from "./components/ProductCard";
 import ImageCarousel from "./components/ImageCarousel";
 import FAQ from "./components/FAQ";
+import Reviews from "./components/Reviews";
 
 export default function Home() {
   // Muvette Air - Secador de Pelo Profesional
@@ -47,6 +48,9 @@ export default function Home() {
         <div className="w-full">
           <ProductCard {...product} />
         </div>
+
+        {/* Customer Reviews Section */}
+        <Reviews />
 
         {/* Lifestyle Carousel Section */}
         <section className="mt-16">
