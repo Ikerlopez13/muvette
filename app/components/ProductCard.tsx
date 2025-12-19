@@ -230,7 +230,7 @@ export default function ProductCard({
               ))}
             </div>
             <span className="text-gray-600 text-sm font-medium">
-              Rated {rating} ({reviews.toLocaleString()})
+              Rated {rating} ({reviews.toLocaleString('en-US')})
             </span>
             <span className="bg-accent text-white px-3 py-1 rounded text-xs font-bold">
               Happy Customers
