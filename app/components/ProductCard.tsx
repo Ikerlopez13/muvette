@@ -42,7 +42,6 @@ export default function ProductCard({
   const [selectedQuantity, setSelectedQuantity] = useState<1 | 2>(1);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const quantityOptions = [
     {
@@ -92,23 +91,15 @@ export default function ProductCard({
   };
 
   const goToPrevImage = () => {
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentImageIndex((prev) => 
-        prev === 0 ? images.length - 1 : prev - 1
-      );
-      setIsTransitioning(false);
-    }, 150);
+    setCurrentImageIndex((prev) => 
+      prev === 0 ? images.length - 1 : prev - 1
+    );
   };
 
   const goToNextImage = () => {
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentImageIndex((prev) => 
-        prev === images.length - 1 ? 0 : prev + 1
-      );
-      setIsTransitioning(false);
-    }, 150);
+    setCurrentImageIndex((prev) => 
+      prev === images.length - 1 ? 0 : prev + 1
+    );
   };
 
   // Touch handlers for mobile swipe
@@ -154,9 +145,7 @@ export default function ProductCard({
             src={images[currentImageIndex]}
             alt={`${name} - image ${currentImageIndex + 1}`}
             fill
-            className={`object-cover transition-all duration-300 ease-in-out ${
-              isTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"
-            }`}
+            className="object-cover transition-opacity duration-200 ease-in-out"
             sizes="(max-width: 1024px) 100vw, 50vw"
             priority={currentImageIndex === 0}
           />
