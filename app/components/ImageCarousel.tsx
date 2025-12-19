@@ -49,13 +49,13 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
         }
 
         .animate-scroll-horizontal {
-          animation: scroll-horizontal 25s linear infinite;
+          animation: scroll-horizontal 12s linear infinite;
         }
 
         /* Faster on mobile */
         @media (max-width: 768px) {
           .animate-scroll-horizontal {
-            animation: scroll-horizontal 20s linear infinite;
+            animation: scroll-horizontal 10s linear infinite;
           }
         }
       `}</style>
