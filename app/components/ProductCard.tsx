@@ -252,9 +252,6 @@ export default function ProductCard({
             <span className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium">
               #1 Best-Selling Hair Dryer
             </span>
-            <span className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
-              <span>✕</span> Made in Korea
-            </span>
           </div>
 
           {/* Stock Alert */}
