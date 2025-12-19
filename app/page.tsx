@@ -37,6 +37,9 @@ export default function Home() {
     "/Gemini_Generated_Image_jz5uvujz5uvujz5u.png",
     "/Gemini_Generated_Image_mp3o7fmp3o7fmp3o.png",
     "/Casual_Luxury_Interior.png",
+    "/A8a700f6281774c2d9279198ca2817c17v.jpg_960x960q75.jpg_.avif",
+    "/A0fce3c2eb89d49499912ac24c01c0421f.jpg_960x960q75.jpg_.avif",
+    "/Aeb6eb15bfc0e494284faa260cea1ee0cB.jpg_960x960q75.jpg_.avif",
   ];
 
   return (
