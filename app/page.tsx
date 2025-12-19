@@ -49,9 +49,6 @@ export default function Home() {
           <ProductCard {...product} />
         </div>
 
-        {/* Customer Reviews Section */}
-        <Reviews />
-
         {/* Lifestyle Carousel Section */}
         <section className="mt-16">
           <div className="text-center mb-8">
@@ -64,6 +61,9 @@ export default function Home() {
           </div>
           <ImageCarousel images={lifestyleImages} />
         </section>
+
+        {/* Customer Reviews Section */}
+        <Reviews />
 
         {/* Included Accessories Section */}
         <section className="mt-16 bg-white rounded-2xl p-8 md:p-12 shadow-md">
